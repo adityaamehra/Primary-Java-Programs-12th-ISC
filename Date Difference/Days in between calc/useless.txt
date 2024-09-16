@@ -1,0 +1,184 @@
+System.out.println("Enter 1");
+int s=0,x,to=mm,td=D.mm,tmin=to>=td?td:to,md=0,ymin=yyyy>=D.yyyy?D.yyyy:yyyy;
+for(x=1;x<=((int)(Math.abs(D.mm-mm))-1);x++)
+{
+//SWITCH OPEN
+switch(tmin+1)
+{
+case 1:
+case 3:
+case 5:
+case 7:
+case 8:
+case 10:
+case 12:
+System.out.println("Enter 2");
+md=31;
+break;
+case 4:
+case 6:
+case 9:
+case 11:
+System.out.println("Enter 3");
+md=30;
+break;
+case 2:
+{
+if(ymin%100==0)
+{
+if((ymin/100)%4==0)
+md=29;
+else
+md=28;
+}
+else
+{
+if(ymin%4==0)
+md=29;
+else
+md=28;
+}
+}
+}
+tmin++;
+//SWITCH CLOSE
+s+=md;
+System.out.println(md+" "+s+" "+tmin);
+}
+s+=D.dd;
+
+switch(mm)
+{
+case 1:
+case 3:
+case 5:
+case 7:
+case 8:
+case 10:
+case 12:
+System.out.println("Enter 2");
+md=31;
+break;
+case 4:
+case 6:
+case 9:
+case 11:
+System.out.println("Enter 3");
+md=30;
+break;
+case 2:
+{
+if(ymin%100==0)
+{
+if((ymin/100)%4==0)
+md=29;
+else
+md=28;
+}
+else
+{
+if(ymin%4==0)
+md=29;
+else
+md=28;
+}
+}
+}
+
+s+=md-dd;
+
+tmin=to>=td?td:to;
+int tmax=to>=td?to:td;
+if(yyyy!=D.yyyy)
+for(int z=0;z<(int)(Math.abs(D.yyyy-yyyy));z++)
+{
+for(x=tmax+1;x<=12;x++)
+{
+switch(x)
+{
+case 1:
+case 3:
+case 5:
+case 7:
+case 8:
+case 10:
+case 12:
+System.out.println("Enter 8");
+md=31;
+break;
+case 4:
+case 6:
+case 9:
+case 11:
+System.out.println("Enter 9");
+md=30;
+break;
+case 2:
+{
+if(ymin%100==0)
+{
+if((ymin/100)%4==0)
+md=29;
+else
+md=28;
+}
+else
+{
+if(ymin%4==0)
+md=29;
+else
+md=28;
+}
+}
+}
+s+=md;
+System.out.println(s+" "+x);
+}
+
+for(x=1;x<tmin;x++)
+{
+switch(x)
+{
+case 1:
+case 3:
+case 5:
+case 7:
+case 8:
+case 10:
+case 12:
+System.out.println("Enter 10");
+md=31;
+break;
+case 4:
+case 6:
+case 9:
+case 11:
+System.out.println("Enter 11");
+md=30;
+break;
+case 2:
+{
+if(ymin%100==0)
+{
+if((ymin/100)%4==0)
+md=29;
+else
+md=28;
+}
+else
+{
+if(ymin%4==0)
+md=29;
+else
+md=28;
+}
+}
+}
+s+=md;
+System.out.println(s+" "+x);
+}
+
+
+}
+return s;
+}

@@ -1,0 +1,30 @@
+for(x=0;x<v;x++)
+{
+for(y=0;y<v;y++)
+if(a[x][y]>0)
+{
+for(z=x;z<v;z++)
+for(h=0;h<v;h++)
+{
+if(a[z][h]==a[x][y])
+a[z][h]=a[x][y]=1;
+for(int h1=0;h1<v;h1++)
+{
+for(int h2=0;h2<v;h2++)
+System.out.print(a[h1][h2]+" ");
+System.out.println();
+}
+System.out.println();
+}
+}
+}
+for(x=0;x<v;x++)
+if(a[t1][x]==1)
+b1=true;
+for(x=0;x<v;x++)
+if(a[t2][x]==1)
+b2=true;
+if(b1&&b2)
+System.out.print("Connection is done");
+else
+System.out.print("Connection is not done");
